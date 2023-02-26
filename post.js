@@ -7,6 +7,28 @@ function init() {
 
 	// load posts from local storage
 	let posts = JSON.parse(localStorage.getItem("posts")) || [];
+	if (posts.length == []) {
+		posts.unshift({
+			title: "Welcome to my blog!",
+			date: "2020-01-01",
+			content: "This is my first post. I hope you enjoy it!",
+		});
+
+		posts.unshift({
+			title: "Post 2",
+			date: "2020-01-02",
+			content: "This is my second post. I hope you enjoy it!",
+		});
+
+		posts.unshift({
+			title: "Post 3",
+			date: "2020-01-03",
+			content: "This is my third post. I hope you enjoy it!",
+		});
+
+		localStorage.setItem("posts", JSON.stringify(posts));
+	}
+
 	loadPosts(posts);
 	
 	addPostBtn.addEventListener("click", function () {
