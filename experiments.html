@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Marlon Trujillo's html experiments.">
+	<title>Marlon's Portfolio</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="styling/main.css">
+</head>
+
+<body>
+	<input title="hamburger menu" type="checkbox">
+	<div id="hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a aria-label="active page" href="experiments.html">Experiments</a></li>
+				<li><a href="academics.html">Academics</a></li>
+				<li><a href="resume.html">Resume</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Experiments</h1>
+		<p>Here are some code snippets I used to experiment with</p>
+		<div>
+			<h2><code>&lt;form&gt;</code> Experiment</h2>
+			<form>
+				<label for="textarea">Textarea: </label>
+				<textarea id="textarea"> hello </textarea>
+				<br>
+				<label>button: </label>
+				<button type="button">test</button>
+				<br>
+				<label>input: <input list="options"></label>
+				<br>
+				<label for="select">select: </label>
+				<select id="select">
+					<optgroup label="group1">
+						<option>option 1</option>
+					</optgroup>
+					<optgroup label="group2">
+						<option>option 1</option>
+					</optgroup>
+				</select>
+				<br>
+				<fieldset>
+					<legend>Field Set</legend>
+
+					<input type="radio" id="option1" value="1" name="fieldSetOption">
+					<label for="option1">option1</label><br>
+
+					<input type="radio" id="option2" value="2" name="fieldSetOption">
+					<label for="option2">option2</label><br>
+				</fieldset>
+				<br>
+			</form>
+			<datalist id="options">
+				<option value="option1">
+				<option value="option2">
+			</datalist>
+		</div>
+		<div>
+			<h2><code>&lt;audio&gt;</code> Experiment</h2>
+			<audio controls>
+				<source src="assets/experiements/direDireDocks.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		<div>
+			<h2><code>&lt;canvas&gt;</code> Experiment</h2>
+			<canvas id="testCanvas"></canvas>
+			<script>
+				var canvas = document.getElementById("testCanvas");
+				var context = canvas.getContext("2d");
+				context.beginPath();
+				context.arc(100, 75, 50, 0, 2 * Math.PI);
+				context.stroke();
+			</script>
+		</div>
+	</main>
+	<footer>
+		<p>Site developed for CSE 134B</p>
+		<pre>
+ __    __   ______   ______   __       ______   __   __    
+/\ "-./  \ /\  __ \ /\  == \ /\ \     /\  __ \ /\ "-.\ \   
+\ \ \-./\ \\ \  __ \\ \  __&lt; \ \ \____\ \ \/\ \\ \ \-.  \  
+ \ \_\ \ \_\\ \_\ \_\\ \_\ \_\\ \_____\\ \_____\\ \_\\"\_\ 
+  \/_/  \/_/ \/_/\/_/ \/_/ /_/ \/_____/ \/_____/ \/_/ \/_/ 
+
+			</pre>
+	</footer>
+</body>
+
+</html>
