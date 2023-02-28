@@ -48,22 +48,24 @@
 
 		// add all the event listeners
 		function init() {
-
+			// add the event listeners to the custom alert button
 			document.getElementById('customAlert').addEventListener('click', function () {
 				customAlertFunc('This is a custom alert');
 			});
 
+			// add the event listeners to the custom confirm button
 			document.getElementById('customConfirm').addEventListener('click', function () {
 				var result = customConfirmFunc('This is a custom confirm');
-
+				// wait for the promise to resolve and set the output to the value returned by the confirm method
 				result.then((value) => {
 					document.getElementById('output').innerHTML = `The value returned by the confirm method is : ${value}`;
 				});
 			});
 
+			// add the event listeners to the custom prompt button
 			document.getElementById('customPrompt').addEventListener('click', function () {
 				var result = customPromptFunc('This is a custom prompt');
-
+				// wait for the promise to resolve and set the output to the value returned by the prompt method
 				result.then((value) => {
 					if (value == null) {
 						document.getElementById('output').innerHTML = 'User did\'t enter a anything';
