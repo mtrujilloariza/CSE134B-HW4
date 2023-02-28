@@ -76,7 +76,4 @@ function init() {
 		document.querySelector("#postForm").reset();
 	});
 
-	let updateDialog = document.querySelector("#updateDialog");
-
-
 }
