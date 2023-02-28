@@ -36,75 +36,49 @@
 	<br>
 	<br>
 
-	<h2>Custom Dialogs</h2>
-	<button id="customAlert">Custom Alert</button>
-	<button id="customConfirm">Custom Confirm</button>
-	<button id="customPrompt">Custom Prompt</button>
-
-	<br>
-	<br>
-
 	<output id="output" style="border: 2px black solid; width: 500px; height: 500px; display: inline-block;"></output>
 
 	<dialog></dialog>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.0/purify.min.js"></script>
-	<script type="module">
-		import { customAlertFunc, customConfirmFunc, customPromptFunc } from '/customdialog.js';
-
+	<script>
+		// wait for DOM to load an then add all the event listeners
 		window.addEventListener('load', init);
 
+		// add all the event listeners
 		function init() {
+			// add alert to the alert button
 			document.getElementById('alert').addEventListener('click', function () {
 				alert('This is an alert!');
 			});
 
+			// add confirm to the confirm button
 			document.getElementById('confirm').addEventListener('click', function () {
 				var result = confirm('do you confirm?');
 				// set the output of the confirm dialog to the output element
 				document.getElementById('output').innerHTML = `The value returned by the confirm method is : ${result}`;
 			});
 
+			// add prompt to the prompt button
 			document.getElementById('prompt').addEventListener('click', function () {
 				var result = prompt('this is a prompt');
-				if (result == '') {
+				// set the output of the prompt dialog to the output element
+				if (result == null) {
 					document.getElementById('output').innerHTML = 'User did\'t enter a anything';
 				} else {
 					document.getElementById('output').innerHTML = `${result}`;
 				}
 			});
 
+			// add prompt with the dom purify to the prompt button
 			document.getElementById('saferPrompt').addEventListener('click', function () {
 				var result = prompt('this is a prompt');
-				if (result == '') {
+				// set the output of the prompt dialog to the purified output element
+				if (result == null) {
 					document.getElementById('output').innerHTML = 'User did\'t enter a anything';
 				} else {
 					document.getElementById('output').innerHTML = DOMPurify.sanitize(`${result}`);
 				}
-			});
-
-			document.getElementById('customAlert').addEventListener('click', function () {
-				customAlertFunc('This is a custom alert');
-			});
-
-			document.getElementById('customConfirm').addEventListener('click', function () {
-				var result = customConfirmFunc('This is a custom confirm');
-
-				result.then((value) => {
-					document.getElementById('output').innerHTML = `The value returned by the confirm method is : ${value}`;
-				});
-			});
-
-			document.getElementById('customPrompt').addEventListener('click', function () {
-				var result = customPromptFunc('This is a custom prompt');
-
-				result.then((value) => {
-					if (value == '') {
-						document.getElementById('output').innerHTML = 'User did\'t enter a anything';
-					} else {
-						document.getElementById('output').innerHTML = DOMPurify.sanitize(`${value}`);
-					}
-				});
 			});
 		}
 	</script>

@@ -29,8 +29,8 @@ export let customConfirmFunc = function (confirmMsg = "") {
 	let answer = false ;
 
 	dialog.querySelector("#confirm").addEventListener("click", function () {
-		dialog.close();
 		answer = true;
+		dialog.close();
 	});
 
 	dialog.querySelector("#cancel").addEventListener("click", function () {
@@ -55,7 +55,7 @@ export let customPromptFunc = function (promptMsg = "") {
 	promptTemplateClone.content.querySelector("p").innerHTML = promptMsg;
 	dialog.innerHTML = promptTemplateClone.innerHTML;
 
-	let answer = '';
+	let answer = null;
 
 	dialog.querySelector("#confirm").addEventListener("click", function () {
 		answer = dialog.querySelector("input").value;
