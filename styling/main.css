@@ -209,6 +209,22 @@ input[title="hamburger menu"] {
    display: none;
 }
 
+span.contrib-number {
+   color: white;
+}
+
+a.pagelink {
+   background: var(--site-dark-grey);
+   display: inline-block;
+   margin: 10px;
+   padding: 10px 20px;
+   border-radius: 25px;
+}
+
+a.pagelink:hover {
+   color: var(--site-grey);
+}
+
 @media screen and (max-width: 767px) {
    footer pre {
       display: none;

@@ -50,6 +50,9 @@
 				Created using a Swift UI, created the card matching game of Set.
 				It helped familiar myself with
 			</p>
+			<a href="https://github.com/mtrujilloariza/Set-Card-Game" target="_blank" class="pagelink"
+				rel="noopener">Github Repo</a>
+
 		</div>
 		<div>
 			<h2>SoundCloud API Search</h2>
@@ -60,7 +63,14 @@
 			<p>
 				Using the SoundCloud API, created a search engine that allows users to search for songs and play them.
 			</p>
+			<a href="https://github.com/mtrujilloariza/OneMonthProjects" target="_blank" class="pagelink"
+				rel="noopener">Github Repo</a>
 		</div>
+
+		<br>
+
+		<h2>My Github Calendar</h2>
+		<div class="calendar"></div>
 	</main>
 	<footer>
 		<p>Site developed for CSE 134B</p>
@@ -73,6 +83,25 @@
 	
 				</pre>
 	</footer>
+	<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+	</script>
+	<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+	<script>
+		// GitHubCalendar(".calendar", "mtrujilloariza");
+
+		// or enable responsive functionality:
+		GitHubCalendar(".calendar", "mtrujilloariza", { responsive: true });
+
+	</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCS98147C4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-DCS98147C4');
+	</script>
 </body>
 
 </html>
