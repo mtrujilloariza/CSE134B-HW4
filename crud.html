@@ -10,7 +10,7 @@
 	<template id="postTemplate">
 		<section>
 			<h2 class="postTitle"></h2>
-			<time class="postDate"></time>
+			<time class="postDate" datetime="09-12-2001"></time>
 			<p class="postContent"></p>
 			<button class="edit">Edit</button>
 			<button class="delete">Delete</button>
@@ -48,13 +48,13 @@
 		<dialog></dialog>
 		<dialog id="postDialog">
 			<form id="postForm">
-				<label for="title">Title</label>
+				<label for="postFormTitle">Title</label>
 				<input type="text" id="postFormTitle" required>
 				<br>
-				<label for="date">Date</label>
+				<label for="postFormDate">Date</label>
 				<input type="date" id="postFormDate" required>
 				<br>
-				<label for="content">Content</label>
+				<label for="postFormContent">Content</label>
 				<textarea id="postFormContent" required></textarea>
 				<br>
 				<button id="savePost" type="submit">Add</button>

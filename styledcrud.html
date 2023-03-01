@@ -7,13 +7,13 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="/styling/crud.css">
+	<link rel="stylesheet" href="/styling/styledcrud.css">
 
 	<template id="postTemplate">
 		<section>
 			<div class="postBody">
 				<h2 class="postTitle"></h2>
-				<time class="postDate"></time>
+				<time class="postDate" datetime="09-12-2001"></time>
 				<p class="postContent"></p>
 			</div>
 			<div class="postButtons">
@@ -76,11 +76,11 @@
 		<dialog></dialog>
 		<dialog id="postDialog">
 			<form id="postForm">
-				<label for="title">Title</label>
+				<label for="postFormTitle">Title</label>
 				<input type="text" id="postFormTitle" required>
-				<label for="date">Date</label>
+				<label for="postFormDate">Date</label>
 				<input type="date" id="postFormDate" required>
-				<label for="content">Content</label>
+				<label for="postFormContent">Content</label>
 				<textarea id="postFormContent" required></textarea>
 				<br>
 				<div class="buttonDiv">

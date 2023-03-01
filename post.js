@@ -3,7 +3,7 @@ import { loadPosts } from "./postLoader.js";
 window.addEventListener("load", init());
 
 function init() {
-	let addPostBtn =  document.querySelector("#addPost");
+	let addPostBtn = document.querySelector("#addPost");
 
 	// load posts from local storage
 	let posts = JSON.parse(localStorage.getItem("posts")) || [];
@@ -32,7 +32,7 @@ function init() {
 
 	// display posts
 	loadPosts(posts);
-	
+
 	// when the add post button is clicked, show the dialog with the post form
 	addPostBtn.addEventListener("click", function () {
 		let dialog = document.querySelector("#postDialog");

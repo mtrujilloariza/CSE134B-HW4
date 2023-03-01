@@ -21,10 +21,10 @@ export let loadPosts = function (posts) {
 		postTemplateClone.content.querySelector(".delete").addEventListener("click", function () {
 			let deleteAns = customConfirmFunc("Are you sure you want to delete this post?");
 			// if the answer is true, call the deletePost function
-			 deleteAns.then(function (answer) {
+			deleteAns.then(function (answer) {
 				if (answer) {
 					deletePost(posts.indexOf(post));
-				} 
+				}
 			});
 		});
 
